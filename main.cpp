@@ -2,6 +2,7 @@
 
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
+#include <SDL3_shadercross/SDL_shadercross.h>
 
 static SDL_Window *window = NULL;
 static SDL_GPUDevice *device = NULL;
