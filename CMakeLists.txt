@@ -5,10 +5,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED true)
 
 project(ProjectDungeon)
 
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
 add_executable(ProjectDungeon main.cpp)
 
 add_subdirectory(lib/SDL)
 target_link_libraries(ProjectDungeon PUBLIC SDL3::SDL3)
 target_include_directories(ProjectDungeon PUBLIC lib/SDL/include)
-
-file(COPY ${CMAKE_CURRENT_BINARY_DIR}/lib/SDL/SDL3.dll DESTINATION .)
