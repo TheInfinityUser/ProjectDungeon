@@ -10,10 +10,14 @@ add_executable(ProjectDungeon main.cpp)
 add_subdirectory(lib/glad)
 add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
+add_subdirectory(lib/stb_image)
+add_subdirectory(lib/spdlog)
 
-target_link_libraries(ProjectDungeon PRIVATE glad glfw glm)
+target_link_libraries(ProjectDungeon PRIVATE glad glfw glm spdlog stb_image)
 target_include_directories(ProjectDungeon PRIVATE 
   lib/glad/include
   lib/glfw/include
   lib/glm
+  lib/stb_image
+  lib/spdlog/include
 )
